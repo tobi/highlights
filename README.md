@@ -6,12 +6,12 @@ This serves a very simple purpose: Download all your kindle highlights for save 
 
 set the following environment variables
 
-AMAZON_USER - Amazon login
-AMAZON_PASS - Amazon password
-STMP - your smtp server. you can get a free one from mailgun
-USER - SMTP login 
-PASS - SMTP password
-TO - Email address to send the highlight to, e.g. yours
+* AMAZON_USER - Amazon login
+* AMAZON_PASS - Amazon password
+* STMP - your smtp server. you can get a free one from mailgun
+* USER - SMTP login 
+* PASS - SMTP password
+* TO - Email address to send the highlight to, e.g. yours
 
 
 ## Commands
