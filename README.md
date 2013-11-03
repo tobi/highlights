@@ -25,9 +25,9 @@ set the following environment variables
 add to your crontab:
 
 ```bash
-# every mornign at 9am send me a highlight
-00 09 * * * * cd ~/src/highlights && rake download TO=... SMTP=... ...
+# every morning at 9am send me a highlight
+00 09 * * * cd ~/your-path/highlights && rake download TO=... SMTP=... ...
 
-# once a week, download
-00 08 00 * * * cd ~/src/highlights && rake download AMAZON_USER=... AMAZON_PASS=...
+# Every Sunday 2am download latest data
+00 02 * * 0 cd ~/your-path/highlights && rake download AMAZON_USER=... AMAZON_PASS=...
 ```

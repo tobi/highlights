@@ -17,8 +17,7 @@ Mail.defaults do
 end
 
 class Kindle
-  def initialize(path = 'data/data.json')
-    FileUtils.mkdir_p(File.basename(path))
+  def initialize(path = 'data.json')
     @path = path
   end
 
@@ -84,3 +83,5 @@ task :email do
 
   mail.deliver
 end
+
+task default: [:download, :print]
