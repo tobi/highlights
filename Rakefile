@@ -84,4 +84,4 @@ task :email do
   mail.deliver
 end
 
-task default: [:download, :print]
+task default: [:download, :email]
