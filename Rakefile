@@ -8,10 +8,10 @@ require 'htmlentities'
 
 Mail.defaults do
   delivery_method :smtp, 
-    address:              ENV['SMTP'] || "smtp.mailgun.org",
-    port:                 ENV['PORT'] || 587,
-    user_name:            ENV['USER'], 
-    password:             ENV['PASS'],
+    address:              ENV['MAILGUN_SMTP_SERVER'] || "smtp.mailgun.org",
+    port:                 ENV['MAILGUN_SMTP_PORT'] || 587,
+    user_name:            ENV['MAILGUN_SMTP_LOGIN'], 
+    password:             ENV['MAILGUN_SMTP_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true     
 end
