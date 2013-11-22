@@ -1,6 +1,6 @@
 # Highlights
 
-Automatically email yourself a random Amazon Kindle highlights from your collection with this script. I run it on Heroku for free and email myself a highlight each day.
+Automatically email yourself a random Amazon Kindle highlight from your collection with this script. I run it on Heroku for free and email myself a highlight each day.
 
 ## Changes from the Original
 
