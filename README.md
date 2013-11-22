@@ -5,6 +5,7 @@ This rakefile can be deployed on Heroku to automatically downlad your Amazon Kin
 ## Changes from the Original
 
 Tobi's original [Kindle highlights rakefile](https://github.com/tobi/highlights) was intended to run as a local cron job. I've updated this implementation with instructions to run on Heroku as a scheduled job. Changes include:
+
 1. Updating the default rake task, from download and print, to download and email.
 2. Change the SMTP environment varaible to default to Heroku's Mailgun ENV variables.
 
