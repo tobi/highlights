@@ -1,6 +1,6 @@
 # Highlights
 
-This rakefile can be deployed on Heroku to automatically downlad your Amazon Kindle highlights, then regularly email one to you.
+Automatically email yourself a random Amazon Kindle highlights from your collection with this script. I run it on Heroku for free and email myself a highlight each day.
 
 ## Changes from the Original
 
