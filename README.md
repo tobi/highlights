@@ -32,7 +32,7 @@ heroku addons:add scheduler
 
 6. Add the free Heroku Mailgun add on to your app. This will automatically set your email environment variables as well:
 ```
-heroku addons:add mailgun:free
+heroku addons:add mailgun
 ```
 
 7. Set your additional environment variables in Heroku:
