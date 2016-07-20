@@ -28,7 +28,6 @@ GEM
       pkg-config (~> 1.1.7)
     ntlm-http (0.1.1)
     pkg-config (1.1.7)
-    rake (11.2.2)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
@@ -41,7 +40,6 @@ DEPENDENCIES
   htmlentities
   kindle-highlights (= 1.0.1)
   mail
-  rake
 
 BUNDLED WITH
    1.11.2
