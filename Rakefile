@@ -23,7 +23,7 @@ class Kindle
 
   def update
     html = HTMLEntities.new
-    kindle = KindleHighlights::Client.new(ENV["AMAZON_USER"], ENV["AMAZON_PASS"])
+    kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
     @highlights = []
 
     kindle.books.each do |key, title|
