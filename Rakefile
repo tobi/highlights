@@ -7,13 +7,13 @@ require 'mail'
 require 'htmlentities'
 
 Mail.defaults do
-  delivery_method :smtp, 
+  delivery_method :smtp,
     address:              ENV['MAILGUN_SMTP_SERVER'] || "smtp.mailgun.org",
     port:                 ENV['MAILGUN_SMTP_PORT'] || 587,
-    user_name:            ENV['MAILGUN_SMTP_LOGIN'], 
+    user_name:            ENV['MAILGUN_SMTP_LOGIN'],
     password:             ENV['MAILGUN_SMTP_PASSWORD'],
     authentication:       'plain',
-    enable_starttls_auto: true     
+    enable_starttls_auto: true
 end
 
 class Kindle
@@ -23,7 +23,7 @@ class Kindle
 
   def update
     html = HTMLEntities.new
-    kindle = KindleHighlights::Client.new(ENV["AMAZON_USER"], ENV["AMAZON_PASS"]) 
+    kindle = KindleHighlights::Client.new(ENV["AMAZON_USER"], ENV["AMAZON_PASS"])
     @highlights = []
 
     kindle.books.each do |key, title|
