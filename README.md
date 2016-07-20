@@ -40,7 +40,7 @@ heroku config:set TO="youraddress@email.com"
 bundle exec rake
 ```
 
-9. Verify your [Mailgun SMTP Domain](https://help.mailgun.com/hc/en-us/articles/202052074-How-do-I-verify-my-domain-)
+9. Add and verify your own [Mailgun SMTP Domain](https://help.mailgun.com/hc/en-us/articles/202052074-How-do-I-verify-my-domain-) from the dashboard or add your email as an authorized receipient.
 
 
 Optionally you can test the script via ```heroku run bundle exec rake```
