@@ -24,6 +24,7 @@ class Kindle
 
   def update
     html = HTMLEntities.new
+    puts ENV["AMAZON_USER"]
     kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
     @highlights = []
 
