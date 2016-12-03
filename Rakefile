@@ -22,10 +22,28 @@ class Kindle
     @path = path
   end
 
-  def update
+  def simpleTest
+
+    kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
+    begin
+      puts kindle.books
+    rescue Exception => e
+      puts e
+    end
+
+    begin
+      puts kindle.books
+    rescue Exception => e
+      puts e
+    end
+
+    return kindle
+  end
+
+  def update(kindle)
     html = HTMLEntities.new
     puts ENV["AMAZON_USER"]
-    kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
+    # kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
     @highlights = []
 
     kindle.books.each do |key, title|
@@ -37,8 +55,8 @@ class Kindle
     end
   end
 
-  def save 
-    File.open(@path, "w+") do |fp| 
+  def save
+    File.open(@path, "w+") do |fp|
       fp << @highlights.to_json
     end
   end
@@ -52,14 +70,14 @@ class Kindle
   end
 end
 
-task :download do 
+task :download do
   data = Kindle.new
-  data.update
+  data.update(data.simpleTest)
   data.save
 end
 
-task :print do 
-  data = Kindle.new 
+task :print do
+  data = Kindle.new
   highlight = data.random_highlight
   puts "\"#{highlight["highlight"]}\""
   puts
@@ -68,7 +86,7 @@ task :print do
 end
 
 
-task :email do 
+task :email do
   data = Kindle.new
   highlight = data.random_highlight
 
