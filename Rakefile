@@ -90,6 +90,8 @@ task :email do
   data = Kindle.new
   highlight = data.random_highlight
 
+  puts "OK, sent email"
+
   mail = Mail.new do
     from    'Kindle Highlights <kindle@highlights.mailgun.com>'
     to      ENV['TO']
