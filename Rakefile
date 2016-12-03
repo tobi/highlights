@@ -25,14 +25,15 @@ class Kindle
   def simpleTest
 
     kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
+
     begin
-      puts kindle.books
+      # puts kindle.books
     rescue Exception => e
       puts e
     end
 
     begin
-      puts kindle.books
+      # puts kindle.books
     rescue Exception => e
       puts e
     end
@@ -42,7 +43,6 @@ class Kindle
 
   def update(kindle)
     html = HTMLEntities.new
-    puts ENV["AMAZON_USER"]
     # kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
     @highlights = []
 
