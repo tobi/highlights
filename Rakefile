@@ -26,11 +26,11 @@ class Kindle
 
     kindle = KindleHighlights::Client.new(email_address: ENV["AMAZON_USER"] || "youremail@domain.com", password: ENV["AMAZON_PASS"] || "youramazonpassword")
 
-    begin
-      puts kindle.books.sample
-    rescue Exception => e
-      puts e
-    end
+    # begin
+    #   puts kindle.books.sample
+    # rescue Exception => e
+    #   puts e
+    # end
 
     begin
       puts kindle.books.sample
