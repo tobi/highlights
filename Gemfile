@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
-gem "kindle-highlights"
+ruby "2.1.2"
+gem "kindle-highlights", "1.0.1"
 gem "htmlentities"
 gem "mail"
